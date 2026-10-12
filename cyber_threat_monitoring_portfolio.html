@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Durogan Indanan Sangkula | Cybersecurity Portfolio</title>
+  <meta name="description" content="Entry-level cybersecurity portfolio featuring Cyber Threat Monitoring Level 1 skills and simulated Splunk investigation projects.">
+  <style>
+    :root { --bg:#0b1220; --panel:#111c2e; --text:#edf3fb; --muted:#a9b8cc; --accent:#55d6be; --line:#26364c; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial,Helvetica,sans-serif; background:linear-gradient(160deg,#0b1220,#101d31); color:var(--text); line-height:1.65; }
+    header { padding:64px 20px 44px; text-align:center; border-bottom:1px solid var(--line); }
+    header .tag { display:inline-block; padding:6px 12px; border:1px solid #2b665f; border-radius:999px; color:var(--accent); font-size:.88rem; }
+    h1 { margin:18px 0 8px; font-size:clamp(2rem,5vw,3.2rem); line-height:1.15; }
+    header p { max-width:700px; margin:12px auto; color:var(--muted); }
+    main { max-width:960px; padding:28px 18px 60px; margin:auto; }
+    section { background:rgba(17,28,46,.88); border:1px solid var(--line); border-radius:16px; padding:24px; margin:18px 0; }
+    h2 { margin-top:0; color:var(--accent); font-size:1.35rem; }
+    h3 { margin-bottom:6px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
+    .skill { padding:12px 14px; border-radius:10px; background:#0c1728; border:1px solid var(--line); }
+    .label { color:var(--muted); font-size:.9rem; }
+    pre { white-space:pre-wrap; overflow-wrap:anywhere; background:#07101d; padding:16px; border-radius:10px; border:1px solid var(--line); color:#b9f5e9; }
+    li { margin:7px 0; }
+    .notice { border-left:4px solid #e5b567; padding:12px 14px; background:#201d1a; color:#f3e6d0; border-radius:6px; }
+    footer { text-align:center; padding:24px; color:var(--muted); border-top:1px solid var(--line); font-size:.9rem; }
+    a { color:var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="tag">ENTRY-LEVEL CYBERSECURITY</span>
+    <h1>Durogan Indanan Sangkula</h1>
+    <p>Cyber Threat Monitoring Level 1 · Splunk SIEM · Security Log Analysis</p>
+    <p>Aspiring cybersecurity professional building skills in security monitoring, threat detection, and incident documentation.</p>
+  </header>
+  <main>
+    <section>
+      <h2>Professional Profile</h2>
+      <p>I completed Cyber Threat Monitoring Level 1 training at Vintazk Academy Inc. I have foundational knowledge of security event monitoring, log analysis, threat detection, and identifying suspicious activities using Splunk. I am eager to apply my skills, gain hands-on experience, and contribute to protecting systems and networks from cyber threats.</p>
+      <p><span class="label">Training:</span> Vintazk Academy Inc. · August 24, 2026 – September 15, 2026</p>
+    </section>
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="grid">
+        <div class="skill">SIEM fundamentals</div>
+        <div class="skill">Splunk log searching and analysis</div>
+        <div class="skill">Security alert monitoring</div>
+        <div class="skill">Basic threat detection</div>
+        <div class="skill">Suspicious login analysis</div>
+        <div class="skill">Incident documentation and escalation</div>
+      </div>
+    </section>
+    <section>
+      <h2>Project 1: Suspicious Login Activity Investigation</h2>
+      <p><span class="label">Project type:</span> Simulated training project</p>
+      <h3>Objective</h3>
+      <p>Review security logs in Splunk to identify repeated failed login attempts that may indicate suspicious authentication activity.</p>
+      <h3>Sample Splunk Search</h3>
+      <pre>index=lab EventCode=4625
+| stats count by user, src_ip
+| sort - count</pre>
+      <p class="label">Note: The index and field names must match the data in your Splunk lab. Adjust them as needed.</p>
+      <h3>Investigation Steps</h3>
+      <ol>
+        <li>Search security event logs in Splunk.</li>
+        <li>Filter for failed login events, commonly associated with Windows Event ID 4625.</li>
+        <li>Review available usernames, source IP addresses, timestamps, and event counts.</li>
+        <li>Look for repeated failures that could indicate a brute-force attempt.</li>
+        <li>Document findings and recommend next steps.</li>
+      </ol>
+      <h3>Sample Findings</h3>
+      <p>Repeated failed login attempts associated with an account and source address may indicate a brute-force attempt. Additional evidence is needed before confirming malicious activity.</p>
+      <h3>Recommendations</h3>
+      <ul>
+        <li>Review the source IP and related security events.</li>
+        <li>Check for successful logins after repeated failures.</li>
+        <li>Escalate suspicious activity according to the organization's procedures.</li>
+        <li>Document the investigation and preserve relevant logs.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Career Goal</h2>
+      <p>My goal is to grow in SOC monitoring, incident investigation, threat detection, and SIEM analysis while gaining practical experience in an entry-level cybersecurity role.</p>
+    </section>
+    <section>
+      <h2>Project Disclaimer</h2>
+      <p class="notice">This is a simulated training project created to demonstrate foundational cybersecurity knowledge. It does not represent a real security incident or professional employment experience. Add screenshots from your own lab before presenting it as completed practical work.</p>
+    </section>
+  </main>
+  <footer>Cyber Threat Monitoring Level 1 Portfolio · Durogan Indanan Sangkula</footer>
+</body>
+</html>
